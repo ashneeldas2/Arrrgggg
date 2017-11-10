@@ -7,7 +7,7 @@ char ** parse_args( char * line ) {
     char ** argz = malloc(6 * sizeof(char *));
     char * temp = NULL;
     int i = 0;
-    while (temp = strsep(&line, " ")) {
+    while ((temp = strsep(&line, " "))) {
         argz[i] = temp;
         i++;
     }
